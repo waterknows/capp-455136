@@ -16,7 +16,11 @@ def KNN(df,var,features,k):
 def mean(df,var):
     df[var] = df[var].fillna(df[var].mean())
     return df
-
+    
+def median(df,var):
+    df[var] = df[var].fillna(df[var].median())
+    return df
+    
 def cmean(df,var,features):
     df[var] = df.groupby(features)[var].transform(lambda x: x.fillna(x.mean()))
     return df
