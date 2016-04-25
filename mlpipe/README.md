@@ -6,9 +6,9 @@ This toolkit normalizes the standard machine learning process into the following
 
 1) Getting Data
 
-2) Exploring Data
+2) Processing Data
 
-3) Imputing Data
+3) Exploring Data
 
 4) Generating Features
 
@@ -24,7 +24,7 @@ To use this package in Python:
 
 3) Import the package: from mlpipe import *
 
-4) Call functions from each submodule: get.*; exp.*; impu.*; gen.*; model.*; eva.*
+4) Call functions from each submodule: get.*; proc.*; exp.*; gen.*; model.*; eva.*
 
-For example, to fill in missing values in your database with KNN method, you just need to call the function impu.KNN:
-impu.KNN(dataframe name, the varaible with missing values; features used to predict the missing values; number of neighbors k)
+For example, to fill in missing values in your database with KNN method, you just need to call the function proc.KNN:
+proc.KNN(dataframe name, the varaible with missing values; features used to predict the missing values; number of neighbors k)
