@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 import pylab as pl
 import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 def summary(df):
     stats=df.describe(include='all').transpose()
@@ -49,3 +50,9 @@ def mostRF(df,var,n):
     sorted_idx = np.argsort(importances)
     best_features = features[sorted_idx][::-1]
     return best_features[:n]
+    
+def display_scores(vectorizer, tfidf_result,n):
+    scores = zip(vectorizer.get_feature_names(),np.asarray(tfidf_result.sum(axis=0)).ravel())
+    sorted_scores = sorted(scores, key=lambda x: x[1], reverse=True)
+    for item in sorted_scores[:n]:
+        print ("{0:30} Score: {1}".format(item[0], item[1]))
