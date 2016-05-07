@@ -4,17 +4,15 @@ The toolkit makes use of the powerful packages such as sklearn, pandas, numpy in
 
 This toolkit normalizes the standard machine learning process into the following six steps: 
 
-1) Getting Data
+1) Preparing Data
 
-2) Processing Data
+2) Exploring Data
 
-3) Exploring Data
+3) Generating Features
 
-4) Generating Features
+4) Running Models
 
-5) Running Models
-
-6) Evaluating Models
+5) Evaluating Models
 
 To use this package in Python:
 
@@ -24,7 +22,7 @@ To use this package in Python:
 
 3) Import the package: from mlpipe import *
 
-4) Call functions from each submodule: get.*; proc.*; exp.*; gen.*; model.*; eva.*
+4) Call functions from each submodule
 
 For example, to fill in missing values in your database with KNN method, you just need to call the function proc.KNN:
 proc.KNN(dataframe name, the varaible with missing values; features used to predict the missing values; number of neighbors k)
